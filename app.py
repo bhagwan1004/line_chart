@@ -98,7 +98,7 @@ def index():
 def serve_static(filename):
     return send_from_directory('static', filename)
 
-@app.route('/data/<path:filename>')
+@app.route('/<path:filename>')
 def serve_data(filename):
     return send_from_directory('.', filename)
 
